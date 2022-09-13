@@ -1,0 +1,26 @@
+<body class="text-center">
+
+<main class="form-signin">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <img class="mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUQlw2FJiWn_OmJ7YmnBtVLBDKZQUF1EU0WGgZgDCldlYuJFCOcai2QQkRyOjt-4cS7XY&usqp=CAU"
+         alt="" width="100" height="100">
+    <h1 class="h3 mb-3 fw-normal">Sisteme Giriş</h1>
+
+    <div class="form-floating">
+        <input type="text" #userName="ngModel" [(ngModel)]="model.userName"  class="form-control"
+               id="userName"  name="userName" placeholder="Kullanıcı Adı" required>
+        <label for="userName">Kullanıcı Adı </label>
+    </div>
+    <div class="form-floating">
+        <input type="password" #password="ngModel" [(ngModel)]="model.password" class="form-control" id="password" name="password" placeholder="Password" required>
+        <label for="password">Password</label>
+    </div>
+    <div class="checkbox mb-3">
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Giriş</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+</main>
+
+
+</body>
